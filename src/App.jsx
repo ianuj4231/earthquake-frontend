@@ -70,14 +70,14 @@ export default function App() {
   // 4. Health polling hook (10 mins)
   useEffect(() => {
     fetchHealth();
-    const interval = setInterval(fetchHealth, 6000000); 
+    const interval = setInterval(fetchHealth, 15000); 
     return () => clearInterval(interval);
   }, []);
 
   // 5. Automated event polling manager bound directly to your nav configuration
   useEffect(() => {
     fetchEvents();
-    const interval = setInterval(fetchEvents, 6000000);
+    const interval = setInterval(fetchEvents, 15000);
     return () => clearInterval(interval);
   }, [windowFilter]);
 
